@@ -13,7 +13,7 @@ This project implements a REST API for user management using Spring Boot and the
 ### 3-tier Architecture
 
 The three-tier architecture is a modular client-server setup comprising presentation, application, and data tiers. It enhances horizontal scalability, performance, and availability by separating responsibilities among tiers, allowing independent development by different teams using varied programming languages.
-
+![Screenshot](Architecture.png)
 
 ## Advantages
 ### Enhanced Data Integrity: 
