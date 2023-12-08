@@ -40,7 +40,8 @@ Altering any module requires rebuilding and testing the entire application, dema
 Monolithic code structures might increase maintenance complexity and effort.
 ### Lack of security:
 The passwords are not encrypted and so everyone will be able to have access to them, plus these are also returned in the response.
-
+### No test:
+I should some test, In order to prevent bugs in advance or even for every person who want to try this app.
 # Deployment Instructions
 
 ## Prerequisites
@@ -77,6 +78,13 @@ mvn clean package
 
 ```bash
 java -jar target/LBC_Back-0.0.1-SNAPSHOT.jar
-
+``
 4. **Access the Application:**
 Once the application is running, access the API endpoints at http://localhost:8080/api/users
+
+
+###Production
+unfortunately I have never done docker, I am stuck at this step, I have added my various tests to you
+
+### how you can improve it, using an other technology or an other pattern
+Domain-Driven Design (DDD) diverges from the traditional three-tier architecture by prioritizing a deep understanding of the business domain. Unlike the layer-based structure of the three-tier model, DDD centers on a holistic and business-centric approach. By embracing DDD, teams gain a clearer insight into the complex business domain and foster a unified language shared by both technical and non-technical stakeholders. This approach promotes enhanced communication and a more accurate reflection of the business domain within the software. DDD's focus on bounded contexts enables better organization and delineation of distinct domains, reducing complexity and allowing independent development. Through defining aggregates, entities, and domain-driven patterns, DDD cultivates a cohesive, maintainable codebase that harmonizes with the intricacies of the business domain.
