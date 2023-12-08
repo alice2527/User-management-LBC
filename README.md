@@ -70,20 +70,22 @@ spring.r2dbc.url=r2dbc:mysql://localhost:3306/user_db?useLegacyDatetimeCode=fals
 spring.r2dbc.username=root
 spring.r2dbc.password=Root123456
 logging.level.io.r2dbc=DEBUG
+````
 3. **Build the Project:**
 ```bash
 mvn clean package
-
-3. **Run the Application:**
+````
+4. **Run the Application:**
 
 ```bash
 java -jar target/LBC_Back-0.0.1-SNAPSHOT.jar
-``
-4. **Access the Application:**
+````
+
+5. **Access the Application:**
 Once the application is running, access the API endpoints at http://localhost:8080/api/users
 
 
-###Production
+### Production
 unfortunately I have never done docker, I am stuck at this step, I have added my various tests to you
 
 ### how you can improve it, using an other technology or an other pattern
