@@ -32,12 +32,9 @@ Each tier operates independently, facilitating updates or changes without system
 
 ## Disadvantages:
 ### Limited Agility: 
-Agility and flexibility in updates are compromised, especially for mobile user needs and operational scalability.
+Agility and flexibility in updates are compromised.
 ### Complex Updates:
 Altering any module requires rebuilding and testing the entire application, demanding substantial effort and time.
-
-### Maintenance Challenges:
-Monolithic code structures might increase maintenance complexity and effort.
 ### Lack of security:
 The passwords are not encrypted and so everyone will be able to have access to them, plus these are also returned in the response.
 ### No test:
