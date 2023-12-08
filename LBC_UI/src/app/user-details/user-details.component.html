@@ -1,0 +1,9 @@
+<div class="card d-flex justify-content-center align-items-center">
+  <img src="../assets/image/iconPerson.jpg">
+<h1>{{data.firstName}}  {{data.lastName}}</h1>
+  <span [ngClass]="{'badge': true, 'bg-primary': data.role === 'admin', 'bg-info': data.role !== 'admin'}" class="text-wrap" style="width: 6rem;">
+    {{data.role}}
+  </span>
+<p>email: {{data.email}}</p>
+  <p>Creation Date: {{data.creationDate}}</p>
+</div>

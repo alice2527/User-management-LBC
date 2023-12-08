@@ -1,0 +1,28 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 150%; /* Ajuster la largeur de la carte */
+  max-width: 1000px; /* Ajouter une largeur maximale pour la carte */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre pour le style */
+  margin-right: 300px;
+}
+
+.tableBody {
+  margin-top: 20px; /* Ajuster selon besoin */
+}
+
+.search-container {
+  margin-bottom: 20px; /* Ajuster selon besoin */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px; /* Ajuster selon besoin */
+}

@@ -1,0 +1,64 @@
+
+<div class="forms">
+  <div class="form-content">
+    <div class="signup-form">
+      <div class="title">Update</div>
+      <form  [formGroup]="myForm" (ngSubmit)="onSubmit()" class="form">
+        <div class="input-boxes">
+          <ng-container *ngIf="myForm.get('firstName') as firstName">
+            <div class="mb-2">
+              <label>First Name</label>
+              <input type="text" class="form-control bg-light border-0" id="firstName"
+                     formControlName="firstName" [ngClass]="{ 'is-invalid': firstName.invalid && firstName.touched }">
+              <div class="invalid-feedback">Veuillez entrer un nom
+              </div>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="myForm.get('lastName') as lastName">
+            <div class="mb-2">
+              <label>Last Name</label>
+              <input type="text" class="form-control bg-light border-0" id="lastName"
+                     formControlName="lastName" [ngClass]="{ 'is-invalid': lastName.invalid && lastName.touched }">
+              <div class="invalid-feedback">Veuillez entrer un nom
+              </div></div>
+          </ng-container>
+
+
+
+          <ng-container *ngIf="myForm.get('password') as password">
+            <div class="mb-2">
+              <label>Password</label>
+              <input type="password" class="form-control bg-light border-0" id="password"
+                     formControlName="password" [ngClass]="{ 'is-invalid': password.invalid && password.touched }">
+              <div class="invalid-feedback">
+                Veuillez entrer un mot de passe
+              </div>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="myForm.get('confirmedPassword') as confirmedPassword">
+            <div class="mb-2">
+              <label>Confirmed Password</label>
+              <input
+                type="password"
+                class="form-control bg-light border-0"
+                id="confirmedPassword"
+                formControlName="confirmedPassword"
+                [ngClass]="{ 'is-invalid': confirmedPassword.invalid && confirmedPassword.touched }"
+              >
+              <div class="invalid-feedback" *ngIf="confirmedPassword.errors">
+                <div *ngIf="confirmedPassword.hasError('required')">Confirmed password is required.</div>
+                <div *ngIf="confirmedPassword.hasError('passwordsNotMatch')">Passwords do not match.</div>
+              </div>
+            </div>
+          </ng-container>
+
+          <div class="button input-box">
+            <input type="submit" value="Submit">
+          </div>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+</div>

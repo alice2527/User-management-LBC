@@ -1,0 +1,51 @@
+<section class="content">
+  <div class="row clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="card">
+        <div class="header">
+          <h2>Liste des Utilisateurs</h2>
+
+          <button type="button" class="btn btn-primary" (click)="newUser()">Créer un nouveau User</button>
+        </div>
+        <div class="tableBody">
+          <table class="table table-striped" *ngIf="userList.length > 0">
+
+          <thead>
+              <tr>
+                <th scope="col" >#</th>
+                <th scope="col" >Nom</th>
+                <th scope="col" >Email</th>
+                <th scope="col">Date Création</th>
+                <th scope="col" >Role</th>
+                <th scope="col" >Actions</th>
+              </tr>
+              </thead>
+              <tbody>
+
+              <ng-container *ngFor="let user of userList">
+                <tr (click)="openUserDetails(user.id)">
+                  <td>{{user.id}}</td>
+                  <td>{{user.firstName}} {{user.lastName}}</td>
+                  <td>{{user.email}}</td>
+                  <td>{{ user.creationDate}}</td>
+                  <td>
+  <span [ngClass]="{'badge': true, 'bg-primary': user.role === 'admin', 'bg-info': user.role !== 'admin'}" class="text-wrap" style="width: 6rem;">
+    {{user.role}}
+  </span>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-outline-info mr-5" (click)="updateUser(user.id, $event)">Update</button>
+
+                  </td>
+                </tr>
+              </ng-container>
+              </tbody>
+          </table>
+          <div *ngIf="userList.length === 0">
+            0 Users
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
