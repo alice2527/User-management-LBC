@@ -32,13 +32,17 @@ Each tier operates independently, facilitating updates or changes without system
 
 ## Disadvantages:
 ### Limited Agility: 
-Agility and flexibility in updates are compromised.
+When working with a three-layer architecture, each layer plays a vital role in the overall functioning of the application. Let's say we want to make a specific change in the way data is processed and displayed. This modification may require adjustments in each of the layers.The interdependence between the different layers of the architecture creates challenges when making changes. Each change can impact multiple parts of the application, slowing down the ability to quickly adjust the system. This means that with each change, you have to take the time to check and adapt several elements of the application, which slows down the process.
 ### Complex Updates:
 Altering any module requires rebuilding and testing the entire application, demanding substantial effort and time.
 ### Lack of security:
-The passwords are not encrypted and so everyone will be able to have access to them, plus these are also returned in the response.
+Data security can be compromised if encryption measures are not applied uniformly to all parts of the application. For example, if passwords are not properly encrypted in the database or during transmission between layers of the application, sensitive information is exposed. This could allow unauthorized access or result in data breaches.
+
+Additionally, when security measures are not strong enough, it can expose sensitive data. If the application does not implement adequate access controls or effective data encryption, this poses a significant risk to data confidentiality and integrity.
 ### No test:
-I should some test, In order to prevent bugs in advance or even for every person who want to try this app.
+A lack of a comprehensive testing strategy can make the application less robust. Implementing a test-oriented development approach or regular testing processes helps to spot and fix errors quickly, ensuring a more stable and reliable application.
+
+Additionally, without proper testing, users might encounter unexpected errors or glitches in the application. This could harm their experience and make them dissatisfied, thus impacting the adoption and usability of the management application.
 # Deployment Instructions
 
 ## Prerequisites
