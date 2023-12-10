@@ -1,6 +1,5 @@
 # User-management-LBC
 
-# Back-end
 This project implements a REST API for user management using Spring Boot and the reactive paradigm. It connects to a SQL or NoSQL database and exposes endpoints to list all users and retrieve users by their unique identifiers.
 
 ## Features
@@ -15,26 +14,9 @@ This project implements a REST API for user management using Spring Boot and the
 The three-tier architecture is a modular client-server setup comprising presentation, application, and data tiers. It enhances horizontal scalability, performance, and availability by separating responsibilities among tiers, allowing independent development by different teams using varied programming languages.
 ![Screenshot](Architecture.png)
 
-## Advantages
-### Enhanced Data Integrity: 
-Centralizing data updates in the second tier ensures only crucial data modifications, preventing potential corruption by unreliable client apps.
-
-### Modular Scalability:
-Easily scalable components leverage the architecture's modularity, improving system availability and robustness.
-
-
-### Task Separation: 
-Clear separation of tasks allows specialized handling by web designers, software engineers, and database administrators, streamlining development and management.
-
-
-### Tier Independence: 
-Each tier operates independently, facilitating updates or changes without system-wide impact.
-
 ## Disadvantages:
 ### Limited Agility: 
 When working with a three-layer architecture, each layer plays a vital role in the overall functioning of the application. Let's say we want to make a specific change in the way data is processed and displayed. This modification may require adjustments in each of the layers.The interdependence between the different layers of the architecture creates challenges when making changes. Each change can impact multiple parts of the application, slowing down the ability to quickly adjust the system. This means that with each change, you have to take the time to check and adapt several elements of the application, which slows down the process.
-### Complex Updates:
-Altering any module requires rebuilding and testing the entire application, demanding substantial effort and time.
 ### Lack of security:
 Data security can be compromised if encryption measures are not applied uniformly to all parts of the application. For example, if passwords are not properly encrypted in the database or during transmission between layers of the application, sensitive information is exposed. This could allow unauthorized access or result in data breaches.
 
@@ -84,6 +66,7 @@ java -jar target/LBC_Back-0.0.1-SNAPSHOT.jar
 
 5. **Access the Application:**
 Once the application is running, access the API endpoints at http://localhost:8080/api/users
+
 
 
 ### Production
